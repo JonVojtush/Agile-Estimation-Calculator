@@ -16,3 +16,8 @@ div.row {
 img#github {
     max-height: 30px;
 }
+
+span#result {
+    background-color: #ffffff;
+    color: #000000;
+}
