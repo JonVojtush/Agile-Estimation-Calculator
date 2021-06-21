@@ -3,6 +3,7 @@ body {
     color: #ffffff;
     text-align: center;
 }
+
 h1 {
     font-size: 20px;
 }
@@ -12,6 +13,6 @@ div.row {
     margin: 10px 0px;
 }
 
-img#sponsor {
+img#github {
     max-height: 30px;
 }
