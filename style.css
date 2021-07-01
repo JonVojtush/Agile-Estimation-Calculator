@@ -4,7 +4,9 @@ body {
     text-align: center;}
 
 div.row {
-    padding: 10px 0px;}
+    padding: 20px 0px;
+    margin: auto;
+    max-width: 60%;}
 
 img#github {
     max-height: 30px;}

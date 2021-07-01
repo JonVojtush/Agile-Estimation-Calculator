@@ -12,10 +12,17 @@
 	</head>
 	<body>
 		<div class="container">
+			<div class="row">
+				<div class="col">
+					<h2>Agile Estimation Calculator</h2>
+				</div>
+			</div>
+			<hr alt="null" />
 			<form>
 				<div class="row"> 
+					<h2>Complexity</h2>
 					<div class="col">
-						<input id="complexity-easy" type="radio" value="1" name="complexity" aria-label="Easy level of complexity"><br />
+						<input id="complexity-easy" type="radio" value="1" name="complexity" aria-label="Easy level of complexity" checked><br />
 						<label for="complexity-easy" class="form-label">Easy</label>
 					</div>
 					<div class="col">
@@ -27,9 +34,11 @@
 						<label for="complexity-difficult" class="form-label">Difficult</label>
 					</div>
 				</div>
+				&nbsp;
 				<div class="row">
+					<h2>Time</h2>
 					<div class="col">
-						<input id="time-day" type="radio" value="1" name="time" aria-label="1 day or less of effort"><br />
+						<input id="time-day" type="radio" value="1" name="time" aria-label="1 day or less of effort" checked><br />
 						<label for="time-day" class="form-label">1 Day or Less</label>
 					</div>
 					<div class="col">
@@ -51,6 +60,7 @@
 					</div>
 				</div>
 			</form>
+			<hr alt="null" />
 			<div class="row">
 				<div class="col">
 					<a title="GitHub Sponsors - Jon Vojtush" alt="Support this developer on GitHub" target="_blank" href="https://github.com/sponsors/JonVojtush"><img id="github" src="assets/github.png" title="Support this developer on GitHub        	 	" alt="null"></a>
