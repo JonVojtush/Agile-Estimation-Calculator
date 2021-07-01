@@ -3,18 +3,8 @@ body {
     color: #ffffff;
     text-align: center;}
 
-h1 {
-    font-size: 26px;}
-
-h2 {
-    font-size: 20px;}
-
 div.row {
     padding: 10px 0px;}
 
 img#github {
     max-height: 30px;}
-
-span#result, span#value {
-    background-color: #ffffff;
-    color: #000000;}
