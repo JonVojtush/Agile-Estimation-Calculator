@@ -2,7 +2,7 @@
 Lightweight web app to enable an individual or team to estimate increments of work consistently over time. The idea is to help derive a more empirical value considering the numeric aspects that we can account for.
 
 
-## How to run this application (v.pre-Mobile)
+## How to run this web application
 1. Download this github repository
 2. Open "index.html" with your web browser
 
