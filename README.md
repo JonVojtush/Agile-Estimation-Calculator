@@ -10,7 +10,7 @@ _If the file doesn't automatically open into your web browser you can:_
 
 - Right click on "index.html"
 - Select "Open with"
-  - OPTIONAL (to always open HTML files like this in a web browser) Select "Choose another app"
-  - Toggle checkbox "☑ Always use this app to open .html files"
-  - Click "OK"
-- Select your preferred web browser
+- Select "Choose another app"
+- Find & select your preferred web browser
+- (OPTIONAL) Toggle checkbox "☑ Always use this app to open .html files"
+- Click "OK"
