@@ -67,7 +67,7 @@
 				<div class="row">
 					<div class="col"> 
 						<a id="total"><span id="value"></span> Points</a><br />
-						<button type="submit" class="btn btn-primary" id="submit" onclick="document.getElementById('value').innerHTML = value; return false">Update</button>
+						<button type="submit" class="btn btn-primary" id="submit" onclick="">Update</button>
 					</div>
 				</div>
 			</form>
@@ -79,8 +79,8 @@
 			</div>
 		</div>
 		<script type="application/javascript">
-			var	complexity = document.getElementsByName('complexity').value,
-				time = document.getElementsByName('time').value,
+			var	complexity = document.querySelector('input[name="complexity"]:checked').value,
+				time = document.querySelector('input[name="time"]:checked').value,
 				value = Number(complexity) * Number(time);
 			document.getElementById('value').innerHTML = value;
 		</script>
