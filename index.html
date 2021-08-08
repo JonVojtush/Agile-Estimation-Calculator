@@ -13,7 +13,7 @@
 			div.row {padding: 20px 0px; margin: auto; max-width: 60%;}
 			img#github {max-height: 30px;}
 			a#total {font-size: 22px; background-color: #ffffff; color: #000000; font-weight: 600;}
-			#submit {margin-top: 30px;}
+			#update {margin-top: 30px;}
 		</style>
 	</head>
 	<body>
@@ -24,50 +24,46 @@
 				</div>
 			</div>
 			<hr />
-			<form id="calculator">
-				<fieldset id="complexity">
-					<div class="row">
-						<legend>Complexity</legend>
-						<div class="col">
-							<input id="complexity-easy" type="radio" value="1" name="complexity" aria-label="Easy level of complexity" checked><br />
-							<label for="complexity-easy" class="form-label">Easy</label>
-						</div>
-						<div class="col">
-							<input id="complexity-moderate" type="radio" value="2" name="complexity" aria-label="Moderate level of complexity"><br />
-							<label for="complexity-moderate" class="form-label">Moderate</label>
-						</div>
-						<div class="col">
-							<input id="complexity-difficult" type="radio" value="3" name="complexity" aria-label="Difficult level of complexity"><br />
-							<label for="complexity-difficult" class="form-label">Difficult</label>
-						</div>
+			<form>
+				<div class="row">
+					<legend>Complexity</legend>
+					<div class="col">
+						<input id="complexity-easy" type="radio" value="1" name="complexity" aria-label="Easy level of complexity" checked><br />
+						<label for="complexity-easy" class="form-label">Easy</label>
 					</div>
-				</fieldset>
+					<div class="col">
+						<input id="complexity-moderate" type="radio" value="2" name="complexity" aria-label="Moderate level of complexity"><br />
+						<label for="complexity-moderate" class="form-label">Moderate</label>
+					</div>
+					<div class="col">
+						<input id="complexity-difficult" type="radio" value="3" name="complexity" aria-label="Difficult level of complexity"><br />
+						<label for="complexity-difficult" class="form-label">Difficult</label>
+					</div>
+				</div>
 				&nbsp;
-				<fieldset id="time">
-					<div class="row">
-						<legend>Time</legend>
-						<div class="col">
-							<input id="time-day" type="radio" value="1" name="time" aria-label="1 day or less of effort" checked><br />
-							<label for="time-day" class="form-label">1 Day or Less</label>
-						</div>
-						<div class="col">
-							<input id="time-week" type="radio" value="2" name="time" aria-label="2 - 5 days of effort"><br />
-							<label for="time-week" class="form-label">2-5 Days</label>
-						</div>
-						<div class="col">
-							<input id="time-bi" type="radio" value="4" name="time" aria-label="1 - 2 weeks of effort"><br />
-							<label for="time-bi" class="form-label">1-2 Weeks</label>
-						</div>
-						<div class="col">
-							<input id="time-month" type="radio" value="6" name="time" aria-label="2 weeks - 1 months of effort"><br />
-							<label for="time-month" class="form-label">2 Weeks - 1 Month</label>
-						</div>
+				<div class="row">
+					<legend>Time</legend>
+					<div class="col">
+						<input id="time-day" type="radio" value="1" name="time" aria-label="1 day or less of effort" checked><br />
+						<label for="time-day" class="form-label">1 Day or Less</label>
 					</div>
-				</fieldset>
+					<div class="col">
+						<input id="time-week" type="radio" value="2" name="time" aria-label="2 - 5 days of effort"><br />
+						<label for="time-week" class="form-label">2-5 Days</label>
+					</div>
+					<div class="col">
+						<input id="time-bi" type="radio" value="4" name="time" aria-label="1 - 2 weeks of effort"><br />
+						<label for="time-bi" class="form-label">1-2 Weeks</label>
+					</div>
+					<div class="col">
+						<input id="time-month" type="radio" value="6" name="time" aria-label="2 weeks - 1 months of effort"><br />
+						<label for="time-month" class="form-label">2 Weeks - 1 Month</label>
+					</div>
+				</div>
 				<div class="row">
 					<div class="col"> 
 						<a id="total"><span id="value"></span> Points</a><br />
-						<button type="submit" class="btn btn-primary" id="submit" onclick="">Update</button>
+						<button type="button" class="btn btn-primary" id="update" onclick="calculate();">Update</button>
 					</div>
 				</div>
 			</form>
@@ -78,11 +74,18 @@
 				</div>
 			</div>
 		</div>
+		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 		<script type="application/javascript">
-			var	complexity = document.querySelector('input[name="complexity"]:checked').value,
-				time = document.querySelector('input[name="time"]:checked').value,
-				value = Number(complexity) * Number(time);
+			var	complexity,
+				time,
+				value = "0";
 			document.getElementById('value').innerHTML = value;
+			function calculate(){
+				complexity = $('input:radio[name=complexity]:checked').val();
+				time = $('input:radio[name=time]:checked').val();
+				value = Number(complexity) * Number(time);
+				document.getElementById('value').innerHTML = value;
+			};
 		</script>
 	</body>
 </html>
