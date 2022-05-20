@@ -12,19 +12,12 @@
 		<style>
 			body {background-color: #000000; color: #ffffff; text-align: center;}
 			div.row {padding: 20px 0px; margin: auto; max-width: 60%;}
-			img#github {max-height: 30px;}
 			a#total {font-size: 22px; background-color: #ffffff; color: #000000; font-weight: 600;}
 			#update {margin-top: 30px;}
 		</style>
 	</head>
 	<body>
 		<div class="container">
-			<div class="row">
-				<div class="col">
-					<h2>Agile Estimation Calculator</h2>
-				</div>
-			</div>
-			<hr />
 			<form>
 				<div class="row">
 					<legend>Complexity</legend>
@@ -68,25 +61,46 @@
 					</div>
 				</div>
 			</form>
-			<hr />
-			<div class="row">
-				<div class="col">
-					<a target="_blank" title="Support This Developer on GitHub" href="https://github.com/sponsors/JonVojtush" rel="nofollow"><img id="github" src="github.png" alt="Support This Developer on GitHub"></a>
-				</div>
-			</div>
 		</div>
-		<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
-		<script type="application/javascript">
-			var	complexity,
-				time,
-				value = "0";
-			document.getElementById('value').innerHTML = value;
-			function calculate(){
-				complexity = $('input:radio[name=complexity]:checked').val();
-				time = $('input:radio[name=time]:checked').val();
-				value = Number(complexity) * Number(time);
-				document.getElementById('value').innerHTML = value;
+		<script>
+			"use strict";
+
+			// Global variables
+			let complexity = {
+					value: 1,
+					ui: document.getElementsByName("complexity")},
+				time = {
+					value: 1,
+					ui: document.getElementsByName("time")},
+					value;
+
+			// Functions
+            function calculate () {
+				for(let i = 0; i < complexity["ui"].length; i++) {
+					if(complexity.ui[i].checked) {
+						complexity.value = complexity.ui[i].value;
+					};
+				};
+				for(let i = 0; i < time["ui"].length; i++) {
+					if(time.ui[i].checked) {
+						time.value = time.ui[i].value;
+					};
+				};
+				value = time.value * complexity.value;
+				document.getElementById("value").innerHTML = value;
 			};
+
+			// Event listeners
+				// Submit button uses HTML
+			for(let i = 0; i < complexity["ui"].length; i++) {
+				complexity.ui[i].addEventListener("change", calculate, false);
+			};
+			for(let i = 0; i < time["ui"].length; i++) {
+				time.ui[i].addEventListener("change", calculate, false);
+			};
+
+			// Default form selection & loads. Complexity & time are defaulted using HTML
+			calculate();
 		</script>
 	</body>
 </html>

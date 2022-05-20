@@ -1,0 +1,46 @@
+{
+  "applicationId": "AgileEstimationCalculator",
+  "version": "2.0.0",
+  "defaultMode": "window",
+  "port": 0,
+  "documentRoot": "/resources/",
+  "url": "/",
+  "enableServer": true,
+  "enableNativeAPI": true,
+  "tokenSecurity": "one-time",
+  "logging": {
+    "enabled": true,
+    "writeToLogFile": true
+  },
+  "nativeAllowList": [
+    "app.*",
+    "os.*",
+    "debug.log"
+  ],
+  "modes": {
+    "window": {
+      "title": "Agile Estimation Calculator",
+      "maxHeight": 550,
+      "minHeight": 550,
+      "maxWidth": 700,
+      "minWidth": 700,
+      "fullScreen": false,
+      "alwaysOnTop": false,
+      "icon": "/resources/github.png",
+      "enableInspector": false,
+      "borderless": false,
+      "maximize": true,
+      "hidden": false,
+      "resizable": true,
+      "exitProcessOnClose": true
+    }
+  },
+  "cli": {
+    "binaryName": "Agile Estimation Calculator",
+    "resourcesPath": "/resources/",
+    "extensionsPath": "/extensions/",
+    "clientLibrary": "/resources/neutralino.js",
+    "binaryVersion": "4.5.0",
+    "clientVersion": "3.4.0"
+  }
+}
