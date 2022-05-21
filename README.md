@@ -4,6 +4,7 @@ Lightweight web app to enable an individual or team to estimate increments of wo
 
 # How to run
 
-1. Open [/RUN-ME](https://github.com/JonVojtush/Agile-Estimation-Calculator/tree/main/RUN-ME)
-2. Determine which executable to run for your operating system
-3. Double click to run the program
+1. Clone this repository 
+2. Open /RUN-ME
+3. Determine which executable to run for your operating system
+4. Double click that program to run
