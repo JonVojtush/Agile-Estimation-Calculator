@@ -8,3 +8,4 @@ Lightweight web app to enable an individual or team to estimate increments of wo
 2. Open /RUN-ME
 3. Determine which executable to run for your operating system
 4. Double click that program to run
+5. If a firewall app like Microsoft Defender pops up, allow the app to run
