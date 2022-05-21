@@ -1,6 +1,6 @@
 # Developer tools' files
 .lite_workspace.lua
-/.tmp
+/tmp
 
 # Neutralinojs binaries and builds
 /bin
