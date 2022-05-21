@@ -1,6 +1,5 @@
 # Developer tools' files
 .lite_workspace.lua
-/release
 
 # Neutralinojs binaries and builds
 /bin
