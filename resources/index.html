@@ -56,7 +56,7 @@
 				</div>
 				<div class="row">
 					<div class="col"> 
-						<a id="total"><span id="value"></span> Story Points</a><br />
+						<a id="total"><span id="value"></span><span id="label"></span></a><br />
 						<!-- <button type="button" class="btn btn-primary" id="update" onclick="calculate();">Update</button> -->
 					</div>
 				</div>
@@ -69,11 +69,18 @@
 			let form = document.forms[0],
 				complexity = form.elements["complexity"],
 				time = form.elements["time"],
-				value;
+				value,
+				label;
 
 			// Functions
             function calculate() {
 				value = time.value * complexity.value;
+				if (value !== 1) {
+					label = " Story Points";
+				} else {
+					label = " Story Point";
+				};
+				document.getElementById("label").innerHTML = label;
 				document.getElementById("value").innerHTML = value;
 			};
 
