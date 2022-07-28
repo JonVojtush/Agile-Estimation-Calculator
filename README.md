@@ -1,4 +1,4 @@
-![Agile Estimation Calculator](sample.png "Agile Estimation Calculator")
+![Agile Estimation Calculator](/resources/screenshot.png "Agile Estimation Calculator")
 
 # Agile Estimation Calculator
 Lightweight web app to enable an individual or team to estimate increments of work consistently over time, considering their interpretation of complexity & time required.

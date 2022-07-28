@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "rootDir": "",
+        "outDir": "",
+        "pretty": true,
+        "extendedDiagnostics": true,
+        "removeComments": true,
+    },
+    "files": [
+        "script.ts"
+    ],
+    "compileOnSave": true
+}
