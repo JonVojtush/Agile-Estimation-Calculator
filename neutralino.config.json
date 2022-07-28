@@ -1,6 +1,6 @@
 {
   "applicationId": "AgileEstimationCalculator",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "defaultMode": "window",
   "port": 0,
   "documentRoot": "/resources/",
@@ -26,7 +26,7 @@
       "minWidth": 700,
       "fullScreen": false,
       "alwaysOnTop": false,
-      "icon": "/resources/github.png",
+      "icon": "/resources/favicon.ico",
       "enableInspector": false,
       "borderless": false,
       "maximize": true,
