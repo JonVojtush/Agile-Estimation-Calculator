@@ -2,8 +2,9 @@
     "compilerOptions": {
         "target": "ESNext",
         "removeComments": true,
+        "extendedDiagnostics": true
     },
     "files": [
         "script.ts"
-    ],
+    ]
 }
